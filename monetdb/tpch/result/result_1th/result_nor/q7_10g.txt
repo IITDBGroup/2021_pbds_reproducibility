@@ -1,0 +1,11 @@
+1 of 3
+runtime is 18.248000
+Current total sum is 0.0
+2 of 3
+runtime is 4.506000
+Current total sum is 4.506000
+3 of 3
+runtime is 3.965000
+Current total sum is 8.471000
+total sum is 8.471000
+Avg runtime is 4.23550000000000000000
