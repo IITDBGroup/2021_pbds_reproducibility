@@ -1,0 +1,302 @@
+1 of 100
+runtime is .019000
+Current total sum is 0.0
+2 of 100
+runtime is .019000
+Current total sum is 0.0
+3 of 100
+runtime is .019000
+Current total sum is 0.0
+4 of 100
+runtime is .018000
+Current total sum is 0.0
+5 of 100
+runtime is .018000
+Current total sum is 0.0
+6 of 100
+runtime is .022000
+Current total sum is 0.0
+7 of 100
+runtime is .018000
+Current total sum is 0.0
+8 of 100
+runtime is .020000
+Current total sum is 0.0
+9 of 100
+runtime is .022000
+Current total sum is 0.0
+10 of 100
+runtime is .020000
+Current total sum is 0.0
+11 of 100
+runtime is .018000
+Current total sum is 0.0
+12 of 100
+runtime is .021000
+Current total sum is 0.0
+13 of 100
+runtime is .018000
+Current total sum is 0.0
+14 of 100
+runtime is .019000
+Current total sum is 0.0
+15 of 100
+runtime is .018000
+Current total sum is 0.0
+16 of 100
+runtime is .018000
+Current total sum is 0.0
+17 of 100
+runtime is .019000
+Current total sum is 0.0
+18 of 100
+runtime is .018000
+Current total sum is 0.0
+19 of 100
+runtime is .018000
+Current total sum is 0.0
+20 of 100
+runtime is .018000
+Current total sum is 0.0
+21 of 100
+runtime is .019000
+Current total sum is 0.0
+22 of 100
+runtime is .019000
+Current total sum is 0.0
+23 of 100
+runtime is .020000
+Current total sum is 0.0
+24 of 100
+runtime is .022000
+Current total sum is 0.0
+25 of 100
+runtime is .018000
+Current total sum is 0.0
+26 of 100
+runtime is .018000
+Current total sum is 0.0
+27 of 100
+runtime is .018000
+Current total sum is 0.0
+28 of 100
+runtime is .018000
+Current total sum is 0.0
+29 of 100
+runtime is .018000
+Current total sum is 0.0
+30 of 100
+runtime is .018000
+Current total sum is 0.0
+31 of 100
+runtime is .018000
+Current total sum is .018000
+32 of 100
+runtime is .020000
+Current total sum is .038000
+33 of 100
+runtime is .018000
+Current total sum is .056000
+34 of 100
+runtime is .023000
+Current total sum is .079000
+35 of 100
+runtime is .018000
+Current total sum is .097000
+36 of 100
+runtime is .021000
+Current total sum is .118000
+37 of 100
+runtime is .018000
+Current total sum is .136000
+38 of 100
+runtime is .020000
+Current total sum is .156000
+39 of 100
+runtime is .018000
+Current total sum is .174000
+40 of 100
+runtime is .018000
+Current total sum is .192000
+41 of 100
+runtime is .019000
+Current total sum is .211000
+42 of 100
+runtime is .018000
+Current total sum is .229000
+43 of 100
+runtime is .020000
+Current total sum is .249000
+44 of 100
+runtime is .018000
+Current total sum is .267000
+45 of 100
+runtime is .020000
+Current total sum is .287000
+46 of 100
+runtime is .022000
+Current total sum is .309000
+47 of 100
+runtime is .018000
+Current total sum is .327000
+48 of 100
+runtime is .019000
+Current total sum is .346000
+49 of 100
+runtime is .020000
+Current total sum is .366000
+50 of 100
+runtime is .018000
+Current total sum is .384000
+51 of 100
+runtime is .018000
+Current total sum is .402000
+52 of 100
+runtime is .019000
+Current total sum is .421000
+53 of 100
+runtime is .018000
+Current total sum is .439000
+54 of 100
+runtime is .019000
+Current total sum is .458000
+55 of 100
+runtime is .018000
+Current total sum is .476000
+56 of 100
+runtime is .017000
+Current total sum is .493000
+57 of 100
+runtime is .018000
+Current total sum is .511000
+58 of 100
+runtime is .017000
+Current total sum is .528000
+59 of 100
+runtime is .018000
+Current total sum is .546000
+60 of 100
+runtime is .018000
+Current total sum is .564000
+61 of 100
+runtime is .017000
+Current total sum is .581000
+62 of 100
+runtime is .020000
+Current total sum is .601000
+63 of 100
+runtime is .020000
+Current total sum is .621000
+64 of 100
+runtime is .018000
+Current total sum is .639000
+65 of 100
+runtime is .018000
+Current total sum is .657000
+66 of 100
+runtime is .018000
+Current total sum is .675000
+67 of 100
+runtime is .021000
+Current total sum is .696000
+68 of 100
+runtime is .018000
+Current total sum is .714000
+69 of 100
+runtime is .019000
+Current total sum is .733000
+70 of 100
+runtime is .021000
+Current total sum is .754000
+71 of 100
+runtime is .018000
+Current total sum is .772000
+72 of 100
+runtime is .018000
+Current total sum is .790000
+73 of 100
+runtime is .019000
+Current total sum is .809000
+74 of 100
+runtime is .019000
+Current total sum is .828000
+75 of 100
+runtime is .019000
+Current total sum is .847000
+76 of 100
+runtime is .019000
+Current total sum is .866000
+77 of 100
+runtime is .019000
+Current total sum is .885000
+78 of 100
+runtime is .018000
+Current total sum is .903000
+79 of 100
+runtime is .018000
+Current total sum is .921000
+80 of 100
+runtime is .018000
+Current total sum is .939000
+81 of 100
+runtime is .018000
+Current total sum is .957000
+82 of 100
+runtime is .019000
+Current total sum is .976000
+83 of 100
+runtime is .019000
+Current total sum is .995000
+84 of 100
+runtime is .021000
+Current total sum is 1.016000
+85 of 100
+runtime is .021000
+Current total sum is 1.037000
+86 of 100
+runtime is .018000
+Current total sum is 1.055000
+87 of 100
+runtime is .018000
+Current total sum is 1.073000
+88 of 100
+runtime is .018000
+Current total sum is 1.091000
+89 of 100
+runtime is .018000
+Current total sum is 1.109000
+90 of 100
+runtime is .018000
+Current total sum is 1.127000
+91 of 100
+runtime is .018000
+Current total sum is 1.145000
+92 of 100
+runtime is .020000
+Current total sum is 1.165000
+93 of 100
+runtime is .019000
+Current total sum is 1.184000
+94 of 100
+runtime is .019000
+Current total sum is 1.203000
+95 of 100
+runtime is .021000
+Current total sum is 1.224000
+96 of 100
+runtime is .018000
+Current total sum is 1.242000
+97 of 100
+runtime is .018000
+Current total sum is 1.260000
+98 of 100
+runtime is .020000
+Current total sum is 1.280000
+99 of 100
+runtime is .018000
+Current total sum is 1.298000
+100 of 100
+runtime is .018000
+Current total sum is 1.316000
+total sum is 1.316000
+Avg runtime is .01880000000000000000

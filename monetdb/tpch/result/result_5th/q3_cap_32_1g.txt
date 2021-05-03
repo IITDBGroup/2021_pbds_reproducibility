@@ -1,0 +1,62 @@
+1 of 20
+runtime is .186000
+Current total sum is 0.0
+2 of 20
+runtime is .173000
+Current total sum is 0.0
+3 of 20
+runtime is .174000
+Current total sum is 0.0
+4 of 20
+runtime is .170000
+Current total sum is 0.0
+5 of 20
+runtime is .174000
+Current total sum is 0.0
+6 of 20
+runtime is .171000
+Current total sum is .171000
+7 of 20
+runtime is .171000
+Current total sum is .342000
+8 of 20
+runtime is .176000
+Current total sum is .518000
+9 of 20
+runtime is .174000
+Current total sum is .692000
+10 of 20
+runtime is .171000
+Current total sum is .863000
+11 of 20
+runtime is .178000
+Current total sum is 1.041000
+12 of 20
+runtime is .176000
+Current total sum is 1.217000
+13 of 20
+runtime is .171000
+Current total sum is 1.388000
+14 of 20
+runtime is .171000
+Current total sum is 1.559000
+15 of 20
+runtime is .174000
+Current total sum is 1.733000
+16 of 20
+runtime is .171000
+Current total sum is 1.904000
+17 of 20
+runtime is .172000
+Current total sum is 2.076000
+18 of 20
+runtime is .171000
+Current total sum is 2.247000
+19 of 20
+runtime is .176000
+Current total sum is 2.423000
+20 of 20
+runtime is .174000
+Current total sum is 2.597000
+total sum is 2.597000
+Avg runtime is .17313333333333333333

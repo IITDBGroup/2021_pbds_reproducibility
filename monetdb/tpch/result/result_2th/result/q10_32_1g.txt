@@ -1,0 +1,92 @@
+1 of 30
+runtime is .053000
+Current total sum is 0.0
+2 of 30
+runtime is .050000
+Current total sum is 0.0
+3 of 30
+runtime is .049000
+Current total sum is 0.0
+4 of 30
+runtime is .054000
+Current total sum is 0.0
+5 of 30
+runtime is .049000
+Current total sum is 0.0
+6 of 30
+runtime is .048000
+Current total sum is .048000
+7 of 30
+runtime is .049000
+Current total sum is .097000
+8 of 30
+runtime is .051000
+Current total sum is .148000
+9 of 30
+runtime is .049000
+Current total sum is .197000
+10 of 30
+runtime is .049000
+Current total sum is .246000
+11 of 30
+runtime is .050000
+Current total sum is .296000
+12 of 30
+runtime is .051000
+Current total sum is .347000
+13 of 30
+runtime is .049000
+Current total sum is .396000
+14 of 30
+runtime is .051000
+Current total sum is .447000
+15 of 30
+runtime is .048000
+Current total sum is .495000
+16 of 30
+runtime is .049000
+Current total sum is .544000
+17 of 30
+runtime is .053000
+Current total sum is .597000
+18 of 30
+runtime is .051000
+Current total sum is .648000
+19 of 30
+runtime is .050000
+Current total sum is .698000
+20 of 30
+runtime is .051000
+Current total sum is .749000
+21 of 30
+runtime is .048000
+Current total sum is .797000
+22 of 30
+runtime is .050000
+Current total sum is .847000
+23 of 30
+runtime is .051000
+Current total sum is .898000
+24 of 30
+runtime is .049000
+Current total sum is .947000
+25 of 30
+runtime is .051000
+Current total sum is .998000
+26 of 30
+runtime is .049000
+Current total sum is 1.047000
+27 of 30
+runtime is .051000
+Current total sum is 1.098000
+28 of 30
+runtime is .048000
+Current total sum is 1.146000
+29 of 30
+runtime is .051000
+Current total sum is 1.197000
+30 of 30
+runtime is .054000
+Current total sum is 1.251000
+total sum is 1.251000
+Avg runtime is .05004000000000000000
