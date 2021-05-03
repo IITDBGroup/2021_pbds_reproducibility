@@ -1,0 +1,26 @@
+                                                                                     QUERY PLAN                                                                                     
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=41795436.57..41795436.58 rows=1 width=96) (actual time=573437.530..573437.530 rows=1 loops=1)
+   ->  Nested Loop  (cost=41795373.39..41795416.37 rows=10 width=72) (actual time=573436.961..573437.005 rows=10 loops=1)
+         ->  Limit  (cost=41795373.10..41795373.12 rows=10 width=80) (actual time=573436.817..573436.822 rows=10 loops=1)
+               ->  Sort  (cost=41795373.10..41796956.72 rows=633449 width=80) (actual time=573436.816..573436.820 rows=10 loops=1)
+                     Sort Key: (((count(1)) + (count(1)))) DESC
+                     Sort Method: top-N heapsort  Memory: 27kB
+                     ->  Merge Join  (cost=0.86..41781684.49 rows=633449 width=80) (actual time=101.377..573429.816 rows=19011 loops=1)
+                           Merge Cond: (f0_1.movieid = f0_2.movieid)
+                           ->  GroupAggregate  (cost=0.44..40819991.06 rows=9070 width=48) (actual time=100.420..558371.541 rows=26743 loops=1)
+                                 Group Key: f0_1.movieid
+                                 ->  Index Only Scan using idx_rm on ratings f0_1  (cost=0.44..519368.40 rows=20000264 width=8) (actual time=0.080..4307.153 rows=20000263 loops=1)
+                                       Heap Fetches: 0
+                           ->  Materialize  (cost=0.42..950529.62 rows=13968 width=48) (actual time=0.953..15036.407 rows=19545 loops=1)
+                                 ->  GroupAggregate  (cost=0.42..950355.02 rows=13968 width=48) (actual time=0.948..15029.011 rows=19545 loops=1)
+                                       Group Key: f0_2.movieid
+                                       ->  Index Only Scan using idx_tm on tags f0_2  (cost=0.42..12103.88 rows=465564 width=8) (actual time=0.050..101.608 rows=465564 loops=1)
+                                             Heap Fetches: 0
+         ->  Index Only Scan using movies_pkey on movies f0  (cost=0.29..4.30 rows=1 width=8) (actual time=0.012..0.012 rows=1 loops=10)
+               Index Cond: (movieid = f0_2.movieid)
+               Heap Fetches: 0
+ Planning time: 34.019 ms
+ Execution time: 573442.834 ms
+(22 rows)
+

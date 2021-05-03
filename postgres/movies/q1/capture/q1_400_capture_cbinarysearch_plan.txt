@@ -1,0 +1,20 @@
+                                                                           QUERY PLAN                                                                            
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=1263962.20..1263962.21 rows=1 width=64) (actual time=70588.443..70588.443 rows=1 loops=1)
+   ->  Limit  (cost=1263961.97..1263962.00 rows=10 width=596) (actual time=70588.410..70588.419 rows=10 loops=1)
+         ->  Sort  (cost=1263961.97..1264030.17 rows=27278 width=596) (actual time=70588.408..70588.413 rows=10 loops=1)
+               Sort Key: f0."AGGR_0" DESC
+               Sort Method: top-N heapsort  Memory: 27kB
+               ->  Subquery Scan on f0  (cost=1262826.94..1263372.50 rows=27278 width=596) (actual time=70562.032..70582.461 rows=26744 loops=1)
+                     ->  HashAggregate  (cost=1262826.94..1263099.72 rows=27278 width=108) (actual time=70562.031..70577.916 rows=26744 loops=1)
+                           Group Key: f0_1.movieid
+                           ->  Hash Join  (cost=893.75..662819.03 rows=20000264 width=52) (actual time=11.246..15456.544 rows=20000263 loops=1)
+                                 Hash Cond: (f0_2.movieid = f0_1.movieid)
+                                 ->  Seq Scan on ratings f0_2  (cost=0.00..386921.64 rows=20000264 width=16) (actual time=0.003..3248.283 rows=20000263 loops=1)
+                                 ->  Hash  (cost=552.78..552.78 rows=27278 width=36) (actual time=11.093..11.093 rows=27278 loops=1)
+                                       Buckets: 32768  Batches: 1  Memory Usage: 2093kB
+                                       ->  Seq Scan on movies f0_1  (cost=0.00..552.78 rows=27278 width=36) (actual time=0.003..4.901 rows=27278 loops=1)
+ Planning time: 2.903 ms
+ Execution time: 70887.844 ms
+(16 rows)
+

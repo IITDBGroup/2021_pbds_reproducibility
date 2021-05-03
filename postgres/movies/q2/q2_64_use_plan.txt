@@ -1,0 +1,19 @@
+                                                                  QUERY PLAN                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=168008.78..168008.79 rows=1 width=8) (actual time=2056.846..2056.846 rows=1 loops=1)
+   ->  GroupAggregate  (cost=6.12..168003.46 rows=426 width=44) (actual time=399.193..2056.841 rows=3 loops=1)
+         Group Key: f0.movieid
+         Filter: (count(f0_1.rating) >= 63300)
+         Rows Removed by Filter: 118
+         ->  Nested Loop  (cost=6.12..167921.56 rows=15527 width=44) (actual time=9.787..1902.443 rows=978988 loops=1)
+               ->  Index Scan using movies_pkey on movies f0  (cost=0.29..24.84 rows=426 width=36) (actual time=0.028..0.261 rows=426 loops=1)
+                     Index Cond: ((movieid >= 1) AND (movieid < 430))
+               ->  Bitmap Heap Scan on ratings f0_1  (cost=5.83..393.02 rows=110 width=16) (actual time=0.738..3.999 rows=2298 loops=426)
+                     Recheck Cond: ((movieid = f0.movieid) AND (movieid >= 288) AND (movieid < 410))
+                     Heap Blocks: exact=932921
+                     ->  Bitmap Index Scan on idx_rm  (cost=0.00..5.80 rows=110 width=0) (actual time=0.357..0.357 rows=2298 loops=426)
+                           Index Cond: ((movieid = f0.movieid) AND (movieid >= 288) AND (movieid < 410))
+ Planning time: 1.318 ms
+ Execution time: 2056.938 ms
+(15 rows)
+

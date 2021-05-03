@@ -1,0 +1,17 @@
+1 of 5
+runtime is 2.548000
+Current total sum is 2.548000
+2 of 5
+runtime is 2.564000
+Current total sum is 5.112000
+3 of 5
+runtime is 2.498000
+Current total sum is 7.610000
+4 of 5
+runtime is 2.552000
+Current total sum is 10.162000
+5 of 5
+runtime is 2.499000
+Current total sum is 12.661000
+total sum is 12.661000
+Avg runtime is 2.53220000000000000000

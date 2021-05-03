@@ -1,0 +1,32 @@
+1 of 10
+runtime is 1.257000
+Current total sum is 0.0
+2 of 10
+runtime is 1.263000
+Current total sum is 0.0
+3 of 10
+runtime is 1.264000
+Current total sum is 1.264000
+4 of 10
+runtime is 1.265000
+Current total sum is 2.529000
+5 of 10
+runtime is 1.264000
+Current total sum is 3.793000
+6 of 10
+runtime is 1.258000
+Current total sum is 5.051000
+7 of 10
+runtime is 1.255000
+Current total sum is 6.306000
+8 of 10
+runtime is 1.262000
+Current total sum is 7.568000
+9 of 10
+runtime is 1.258000
+Current total sum is 8.826000
+10 of 10
+runtime is 1.259000
+Current total sum is 10.085000
+total sum is 10.085000
+Avg runtime is 1.26062500000000000000

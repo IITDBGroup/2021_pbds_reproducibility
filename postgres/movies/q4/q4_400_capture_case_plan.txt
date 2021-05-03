@@ -1,0 +1,25 @@
+                                                                             QUERY PLAN                                                                             
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop  (cost=527220.80..527303.79 rows=10 width=44) (actual time=8937.430..8937.474 rows=10 loops=1)
+   ->  Limit  (cost=527220.52..527220.54 rows=10 width=16) (actual time=8937.345..8937.351 rows=10 loops=1)
+         ->  Sort  (cost=527220.52..528804.14 rows=633449 width=16) (actual time=8937.343..8937.348 rows=10 loops=1)
+               Sort Key: (((count(1)) + (count(1)))) DESC
+               Sort Method: top-N heapsort  Memory: 25kB
+               ->  Merge Join  (cost=487700.99..513531.91 rows=633449 width=16) (actual time=8788.591..8933.859 rows=19011 loops=1)
+                     Merge Cond: (f0_1.movieid = f0_2.movieid)
+                     ->  GroupAggregate  (cost=0.42..14571.38 rows=13968 width=16) (actual time=0.185..130.159 rows=19545 loops=1)
+                           Group Key: f0_1.movieid
+                           ->  Index Only Scan using idx_tm on tags f0_1  (cost=0.42..12103.88 rows=465564 width=8) (actual time=0.061..61.893 rows=465564 loops=1)
+                                 Heap Fetches: 0
+                     ->  Sort  (cost=487700.57..487723.25 rows=9070 width=16) (actual time=8788.367..8792.847 rows=26743 loops=1)
+                           Sort Key: f0_2.movieid
+                           Sort Method: quicksort  Memory: 2022kB
+                           ->  HashAggregate  (cost=486922.96..487013.66 rows=9070 width=16) (actual time=8773.645..8780.111 rows=26744 loops=1)
+                                 Group Key: f0_2.movieid
+                                 ->  Seq Scan on ratings f0_2  (cost=0.00..386921.64 rows=20000264 width=8) (actual time=0.024..2469.442 rows=20000263 loops=1)
+   ->  Index Scan using movies_pkey on movies f0  (cost=0.29..8.30 rows=1 width=36) (actual time=0.009..0.009 rows=1 loops=10)
+         Index Cond: (movieid = f0_1.movieid)
+ Planning time: 23.170 ms
+ Execution time: 8937.877 ms
+(21 rows)
+
