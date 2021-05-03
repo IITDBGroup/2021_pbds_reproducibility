@@ -1,0 +1,800 @@
+Q2: num: 1  nor cost:51.38 current total cost:51.38 normal cost:51.42 current total normal cost:51.42
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 1 with cost: 51.38
+Q2: num: 2  nor cost:51.51 current total cost:102.89 normal cost:51.67 current total normal cost:103.09
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 2 with cost: 102.89
+Q2: num: 3  nor cost:51.5 current total cost:154.39 normal cost:51.51 current total normal cost:154.6
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 3 with cost: 154.39
+Q2: num: 4  nor cost:51.57 current total cost:205.96 normal cost:51.44 current total normal cost:206.04
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 4 with cost: 205.96
+Q2: num: 5  nor cost:51.45 current total cost:257.41 normal cost:51.67 current total normal cost:257.71
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 5 with cost: 257.41
+Q2: num: 6  nor cost:51.46 current total cost:308.87 normal cost:51.78 current total normal cost:309.49
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 6 with cost: 308.87
+Q2: num: 7  nor cost:51.7 current total cost:360.57 normal cost:51.49 current total normal cost:360.98
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 7 with cost: 360.57
+Q2: num: 8  nor cost:51.78 current total cost:412.35 normal cost:51.57 current total normal cost:412.55
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 8 with cost: 412.35
+Q2: num: 9  nor cost:51.53 current total cost:463.88 normal cost:51.58 current total normal cost:464.13
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 9 with cost: 463.88
+Q2: num: 10  nor cost:51.5 current total cost:515.38 normal cost:51.55 current total normal cost:515.68
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 10 with cost: 515.38
+Q2: num: 11  nor cost:51.63 current total cost:567.01 normal cost:51.45 current total normal cost:567.13
+Current total number of use: 0 with cost: 0
+Current total number of cap: 0 with cost: 0
+Current total number of nor: 11 with cost: 567.01
+Q2: num: 12  cap cost:184.424449 use cost:4.55 current total cost:755.984449 normal cost:51.54 current total normal cost:618.67
+Current total number of use: 1 with cost: 4.55
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 11 with cost: 567.01
+Q2: num: 13  use cost:4.3 current total cost:760.284449 normal cost:51.46 current total normal cost:670.13
+Current total number of use: 2 with cost: 8.85
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 11 with cost: 567.01
+Q2: num: 14  nor cost:51.56 current total cost:811.844449 normal cost:51.76 current total normal cost:721.89
+Current total number of use: 2 with cost: 8.85
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 12 with cost: 618.57
+Q2: num: 15  nor cost:51.52 current total cost:863.364449 normal cost:51.52 current total normal cost:773.41
+Current total number of use: 2 with cost: 8.85
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 13 with cost: 670.09
+Q2: num: 16  use cost:4.29 current total cost:867.654449 normal cost:51.52 current total normal cost:824.93
+Current total number of use: 3 with cost: 13.14
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 13 with cost: 670.09
+Q2: num: 17  nor cost:51.68 current total cost:919.334449 normal cost:51.64 current total normal cost:876.57
+Current total number of use: 3 with cost: 13.14
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 14 with cost: 721.77
+Q2: num: 18  nor cost:51.64 current total cost:970.974449 normal cost:51.49 current total normal cost:928.06
+Current total number of use: 3 with cost: 13.14
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 15 with cost: 773.41
+Q2: num: 19  use cost:4.32 current total cost:975.294449 normal cost:51.54 current total normal cost:979.6
+Current total number of use: 4 with cost: 17.46
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 15 with cost: 773.41
+Q2: num: 20  nor cost:51.74 current total cost:1027.034449 normal cost:51.65 current total normal cost:1031.25
+Current total number of use: 4 with cost: 17.46
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 16 with cost: 825.15
+Q2: num: 21  nor cost:51.7 current total cost:1078.734449 normal cost:51.65 current total normal cost:1082.9
+Current total number of use: 4 with cost: 17.46
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 17 with cost: 876.85
+Q2: num: 22  nor cost:51.76 current total cost:1130.494449 normal cost:51.56 current total normal cost:1134.46
+Current total number of use: 4 with cost: 17.46
+Current total number of cap: 1 with cost: 184.424449
+Current total number of nor: 18 with cost: 928.61
+Q2: num: 23  cap cost:182.781738 use cost:4.35 current total cost:1317.626187 normal cost:51.4 current total normal cost:1185.86
+Current total number of use: 5 with cost: 21.81
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 18 with cost: 928.61
+Q2: num: 24  use cost:4.12 current total cost:1321.746187 normal cost:51.59 current total normal cost:1237.45
+Current total number of use: 6 with cost: 25.93
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 18 with cost: 928.61
+Q2: num: 25  nor cost:51.69 current total cost:1373.436187 normal cost:51.7 current total normal cost:1289.15
+Current total number of use: 6 with cost: 25.93
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 19 with cost: 980.3
+Q2: num: 26  nor cost:51.43 current total cost:1424.866187 normal cost:51.5 current total normal cost:1340.65
+Current total number of use: 6 with cost: 25.93
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 20 with cost: 1031.73
+Q2: num: 27  use cost:4.13 current total cost:1428.996187 normal cost:51.67 current total normal cost:1392.32
+Current total number of use: 7 with cost: 30.06
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 20 with cost: 1031.73
+Q2: num: 28  nor cost:51.6 current total cost:1480.596187 normal cost:51.56 current total normal cost:1443.88
+Current total number of use: 7 with cost: 30.06
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 21 with cost: 1083.33
+Q2: num: 29  use cost:4.33 current total cost:1484.926187 normal cost:51.53 current total normal cost:1495.41
+Current total number of use: 8 with cost: 34.39
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 21 with cost: 1083.33
+Q2: num: 30  use cost:4.31 current total cost:1489.236187 normal cost:51.47 current total normal cost:1546.88
+Current total number of use: 9 with cost: 38.7
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 21 with cost: 1083.33
+Q2: num: 31  use cost:4.33 current total cost:1493.566187 normal cost:51.65 current total normal cost:1598.53
+Current total number of use: 10 with cost: 43.03
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 21 with cost: 1083.33
+Q2: num: 32  use cost:4.11 current total cost:1497.676187 normal cost:51.54 current total normal cost:1650.07
+Current total number of use: 11 with cost: 47.14
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 21 with cost: 1083.33
+Q2: num: 33  use cost:4.12 current total cost:1501.796187 normal cost:51.74 current total normal cost:1701.81
+Current total number of use: 12 with cost: 51.26
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 21 with cost: 1083.33
+Q2: num: 34  nor cost:51.63 current total cost:1553.426187 normal cost:51.65 current total normal cost:1753.46
+Current total number of use: 12 with cost: 51.26
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 22 with cost: 1134.96
+Q2: num: 35  use cost:4.12 current total cost:1557.546187 normal cost:51.69 current total normal cost:1805.15
+Current total number of use: 13 with cost: 55.38
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 22 with cost: 1134.96
+Q2: num: 36  use cost:4.33 current total cost:1561.876187 normal cost:51.67 current total normal cost:1856.82
+Current total number of use: 14 with cost: 59.71
+Current total number of cap: 2 with cost: 367.206187
+Current total number of nor: 22 with cost: 1134.96
+Q2: num: 37  cap cost:183.434668 use cost:7.24 current total cost:1752.550855 normal cost:51.43 current total normal cost:1908.25
+Current total number of use: 15 with cost: 66.95
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 22 with cost: 1134.96
+Q2: num: 38  nor cost:51.62 current total cost:1804.170855 normal cost:51.63 current total normal cost:1959.88
+Current total number of use: 15 with cost: 66.95
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 23 with cost: 1186.58
+Q2: num: 39  use cost:4.31 current total cost:1808.480855 normal cost:51.6 current total normal cost:2011.48
+Current total number of use: 16 with cost: 71.26
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 23 with cost: 1186.58
+Q2: num: 40  use cost:4.13 current total cost:1812.610855 normal cost:51.47 current total normal cost:2062.95
+Current total number of use: 17 with cost: 75.39
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 23 with cost: 1186.58
+Q2: num: 41  nor cost:51.49 current total cost:1864.100855 normal cost:51.59 current total normal cost:2114.54
+Current total number of use: 17 with cost: 75.39
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 42  use cost:4.11 current total cost:1868.210855 normal cost:51.6 current total normal cost:2166.14
+Current total number of use: 18 with cost: 79.5
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 43  use cost:4.12 current total cost:1872.330855 normal cost:51.43 current total normal cost:2217.57
+Current total number of use: 19 with cost: 83.62
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 44  use cost:4.11 current total cost:1876.440855 normal cost:51.73 current total normal cost:2269.3
+Current total number of use: 20 with cost: 87.73
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 45  use cost:4.13 current total cost:1880.570855 normal cost:51.77 current total normal cost:2321.07
+Current total number of use: 21 with cost: 91.86
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 46  use cost:4.32 current total cost:1884.890855 normal cost:51.67 current total normal cost:2372.74
+Current total number of use: 22 with cost: 96.18
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 47  use cost:4.13 current total cost:1889.020855 normal cost:51.77 current total normal cost:2424.51
+Current total number of use: 23 with cost: 100.31
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 48  use cost:4.13 current total cost:1893.150855 normal cost:51.56 current total normal cost:2476.07
+Current total number of use: 24 with cost: 104.44
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 49  use cost:4.32 current total cost:1897.470855 normal cost:51.56 current total normal cost:2527.63
+Current total number of use: 25 with cost: 108.76
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 50  use cost:4.13 current total cost:1901.600855 normal cost:51.43 current total normal cost:2579.06
+Current total number of use: 26 with cost: 112.89
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 51  use cost:4.11 current total cost:1905.710855 normal cost:51.71 current total normal cost:2630.77
+Current total number of use: 27 with cost: 117.0
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 52  use cost:4.13 current total cost:1909.840855 normal cost:51.71 current total normal cost:2682.48
+Current total number of use: 28 with cost: 121.13
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 24 with cost: 1238.07
+Q2: num: 53  nor cost:51.66 current total cost:1961.500855 normal cost:51.55 current total normal cost:2734.03
+Current total number of use: 28 with cost: 121.13
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 25 with cost: 1289.73
+Q2: num: 54  nor cost:51.42 current total cost:2012.920855 normal cost:51.66 current total normal cost:2785.69
+Current total number of use: 28 with cost: 121.13
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 26 with cost: 1341.15
+Q2: num: 55  use cost:4.13 current total cost:2017.050855 normal cost:51.45 current total normal cost:2837.14
+Current total number of use: 29 with cost: 125.26
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 26 with cost: 1341.15
+Q2: num: 56  nor cost:51.81 current total cost:2068.860855 normal cost:51.51 current total normal cost:2888.65
+Current total number of use: 29 with cost: 125.26
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 27 with cost: 1392.96
+Q2: num: 57  use cost:4.13 current total cost:2072.990855 normal cost:51.68 current total normal cost:2940.33
+Current total number of use: 30 with cost: 129.39
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 27 with cost: 1392.96
+Q2: num: 58  nor cost:51.7 current total cost:2124.690855 normal cost:51.73 current total normal cost:2992.06
+Current total number of use: 30 with cost: 129.39
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 28 with cost: 1444.66
+Q2: num: 59  use cost:4.32 current total cost:2129.010855 normal cost:51.45 current total normal cost:3043.51
+Current total number of use: 31 with cost: 133.71
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 28 with cost: 1444.66
+Q2: num: 60  use cost:4.32 current total cost:2133.330855 normal cost:51.71 current total normal cost:3095.22
+Current total number of use: 32 with cost: 138.03
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 28 with cost: 1444.66
+Q2: num: 61  nor cost:51.61 current total cost:2184.940855 normal cost:51.77 current total normal cost:3146.99
+Current total number of use: 32 with cost: 138.03
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 29 with cost: 1496.27
+Q2: num: 62  use cost:4.31 current total cost:2189.250855 normal cost:51.58 current total normal cost:3198.57
+Current total number of use: 33 with cost: 142.34
+Current total number of cap: 3 with cost: 550.640855
+Current total number of nor: 29 with cost: 1496.27
+Q2: num: 63  cap cost:183.139712 use cost:5.28 current total cost:2377.670567 normal cost:51.6 current total normal cost:3250.17
+Current total number of use: 34 with cost: 147.62
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 29 with cost: 1496.27
+Q2: num: 64  nor cost:51.59 current total cost:2429.260567 normal cost:51.71 current total normal cost:3301.88
+Current total number of use: 34 with cost: 147.62
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 30 with cost: 1547.86
+Q2: num: 65  use cost:4.15 current total cost:2433.410567 normal cost:51.76 current total normal cost:3353.64
+Current total number of use: 35 with cost: 151.77
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 30 with cost: 1547.86
+Q2: num: 66  use cost:5.14 current total cost:2438.550567 normal cost:51.55 current total normal cost:3405.19
+Current total number of use: 36 with cost: 156.91
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 30 with cost: 1547.86
+Q2: num: 67  use cost:7.15 current total cost:2445.700567 normal cost:51.61 current total normal cost:3456.8
+Current total number of use: 37 with cost: 164.06
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 30 with cost: 1547.86
+Q2: num: 68  use cost:7.2 current total cost:2452.900567 normal cost:51.64 current total normal cost:3508.44
+Current total number of use: 38 with cost: 171.26
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 30 with cost: 1547.86
+Q2: num: 69  use cost:4.34 current total cost:2457.240567 normal cost:51.63 current total normal cost:3560.07
+Current total number of use: 39 with cost: 175.6
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 30 with cost: 1547.86
+Q2: num: 70  use cost:4.34 current total cost:2461.580567 normal cost:51.47 current total normal cost:3611.54
+Current total number of use: 40 with cost: 179.94
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 30 with cost: 1547.86
+Q2: num: 71  nor cost:51.31 current total cost:2512.890567 normal cost:51.5 current total normal cost:3663.04
+Current total number of use: 40 with cost: 179.94
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 31 with cost: 1599.17
+Q2: num: 72  use cost:4.36 current total cost:2517.250567 normal cost:51.61 current total normal cost:3714.65
+Current total number of use: 41 with cost: 184.3
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 31 with cost: 1599.17
+Q2: num: 73  use cost:4.13 current total cost:2521.380567 normal cost:51.64 current total normal cost:3766.29
+Current total number of use: 42 with cost: 188.43
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 31 with cost: 1599.17
+Q2: num: 74  use cost:4.33 current total cost:2525.710567 normal cost:51.53 current total normal cost:3817.82
+Current total number of use: 43 with cost: 192.76
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 31 with cost: 1599.17
+Q2: num: 75  nor cost:51.43 current total cost:2577.140567 normal cost:51.47 current total normal cost:3869.29
+Current total number of use: 43 with cost: 192.76
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 76  use cost:4.13 current total cost:2581.270567 normal cost:51.47 current total normal cost:3920.76
+Current total number of use: 44 with cost: 196.89
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 77  use cost:4.34 current total cost:2585.610567 normal cost:51.57 current total normal cost:3972.33
+Current total number of use: 45 with cost: 201.23
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 78  use cost:4.13 current total cost:2589.740567 normal cost:51.72 current total normal cost:4024.05
+Current total number of use: 46 with cost: 205.36
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 79  use cost:4.11 current total cost:2593.850567 normal cost:51.47 current total normal cost:4075.52
+Current total number of use: 47 with cost: 209.47
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 80  use cost:4.13 current total cost:2597.980567 normal cost:51.67 current total normal cost:4127.19
+Current total number of use: 48 with cost: 213.6
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 81  use cost:4.12 current total cost:2602.100567 normal cost:51.75 current total normal cost:4178.94
+Current total number of use: 49 with cost: 217.72
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 82  use cost:4.13 current total cost:2606.230567 normal cost:51.66 current total normal cost:4230.6
+Current total number of use: 50 with cost: 221.85
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 83  use cost:5.16 current total cost:2611.390567 normal cost:51.63 current total normal cost:4282.23
+Current total number of use: 51 with cost: 227.01
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 84  use cost:4.35 current total cost:2615.740567 normal cost:51.72 current total normal cost:4333.95
+Current total number of use: 52 with cost: 231.36
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 32 with cost: 1650.6
+Q2: num: 85  nor cost:51.58 current total cost:2667.320567 normal cost:51.49 current total normal cost:4385.44
+Current total number of use: 52 with cost: 231.36
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 33 with cost: 1702.18
+Q2: num: 86  use cost:4.15 current total cost:2671.470567 normal cost:51.39 current total normal cost:4436.83
+Current total number of use: 53 with cost: 235.51
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 33 with cost: 1702.18
+Q2: num: 87  use cost:4.15 current total cost:2675.620567 normal cost:51.65 current total normal cost:4488.48
+Current total number of use: 54 with cost: 239.66
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 33 with cost: 1702.18
+Q2: num: 88  nor cost:51.56 current total cost:2727.180567 normal cost:51.69 current total normal cost:4540.17
+Current total number of use: 54 with cost: 239.66
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 34 with cost: 1753.74
+Q2: num: 89  use cost:4.34 current total cost:2731.520567 normal cost:51.54 current total normal cost:4591.71
+Current total number of use: 55 with cost: 244.0
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 34 with cost: 1753.74
+Q2: num: 90  nor cost:51.79 current total cost:2783.310567 normal cost:51.57 current total normal cost:4643.28
+Current total number of use: 55 with cost: 244.0
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 35 with cost: 1805.53
+Q2: num: 91  use cost:4.17 current total cost:2787.480567 normal cost:51.58 current total normal cost:4694.86
+Current total number of use: 56 with cost: 248.17
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 35 with cost: 1805.53
+Q2: num: 92  use cost:4.13 current total cost:2791.610567 normal cost:51.35 current total normal cost:4746.21
+Current total number of use: 57 with cost: 252.3
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 35 with cost: 1805.53
+Q2: num: 93  use cost:4.32 current total cost:2795.930567 normal cost:51.55 current total normal cost:4797.76
+Current total number of use: 58 with cost: 256.62
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 35 with cost: 1805.53
+Q2: num: 94  use cost:4.13 current total cost:2800.060567 normal cost:51.72 current total normal cost:4849.48
+Current total number of use: 59 with cost: 260.75
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 35 with cost: 1805.53
+Q2: num: 95  use cost:4.13 current total cost:2804.190567 normal cost:51.45 current total normal cost:4900.93
+Current total number of use: 60 with cost: 264.88
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 35 with cost: 1805.53
+Q2: num: 96  use cost:4.14 current total cost:2808.330567 normal cost:51.61 current total normal cost:4952.54
+Current total number of use: 61 with cost: 269.02
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 35 with cost: 1805.53
+Q2: num: 97  use cost:4.34 current total cost:2812.670567 normal cost:51.57 current total normal cost:5004.11
+Current total number of use: 62 with cost: 273.36
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 35 with cost: 1805.53
+Q2: num: 98  nor cost:51.42 current total cost:2864.090567 normal cost:51.52 current total normal cost:5055.63
+Current total number of use: 62 with cost: 273.36
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 36 with cost: 1856.95
+Q2: num: 99  use cost:4.33 current total cost:2868.420567 normal cost:51.61 current total normal cost:5107.24
+Current total number of use: 63 with cost: 277.69
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 36 with cost: 1856.95
+Q2: num: 100  use cost:4.32 current total cost:2872.740567 normal cost:51.47 current total normal cost:5158.71
+Current total number of use: 64 with cost: 282.01
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 36 with cost: 1856.95
+Q2: num: 101  use cost:7.18 current total cost:2879.920567 normal cost:51.67 current total normal cost:5210.38
+Current total number of use: 65 with cost: 289.19
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 36 with cost: 1856.95
+Q2: num: 102  nor cost:51.56 current total cost:2931.480567 normal cost:51.68 current total normal cost:5262.06
+Current total number of use: 65 with cost: 289.19
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 37 with cost: 1908.51
+Q2: num: 103  nor cost:51.81 current total cost:2983.290567 normal cost:51.58 current total normal cost:5313.64
+Current total number of use: 65 with cost: 289.19
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 38 with cost: 1960.32
+Q2: num: 104  use cost:4.34 current total cost:2987.630567 normal cost:51.8 current total normal cost:5365.44
+Current total number of use: 66 with cost: 293.53
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 38 with cost: 1960.32
+Q2: num: 105  use cost:4.12 current total cost:2991.750567 normal cost:51.55 current total normal cost:5416.99
+Current total number of use: 67 with cost: 297.65
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 38 with cost: 1960.32
+Q2: num: 106  use cost:7.13 current total cost:2998.880567 normal cost:51.72 current total normal cost:5468.71
+Current total number of use: 68 with cost: 304.78
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 38 with cost: 1960.32
+Q2: num: 107  use cost:4.31 current total cost:3003.190567 normal cost:51.53 current total normal cost:5520.24
+Current total number of use: 69 with cost: 309.09
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 38 with cost: 1960.32
+Q2: num: 108  nor cost:51.58 current total cost:3054.770567 normal cost:51.59 current total normal cost:5571.83
+Current total number of use: 69 with cost: 309.09
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 109  use cost:4.12 current total cost:3058.890567 normal cost:51.75 current total normal cost:5623.58
+Current total number of use: 70 with cost: 313.21
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 110  use cost:4.32 current total cost:3063.210567 normal cost:51.51 current total normal cost:5675.09
+Current total number of use: 71 with cost: 317.53
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 111  use cost:7.17 current total cost:3070.380567 normal cost:51.7 current total normal cost:5726.79
+Current total number of use: 72 with cost: 324.7
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 112  use cost:4.34 current total cost:3074.720567 normal cost:51.78 current total normal cost:5778.57
+Current total number of use: 73 with cost: 329.04
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 113  use cost:7.18 current total cost:3081.900567 normal cost:51.49 current total normal cost:5830.06
+Current total number of use: 74 with cost: 336.22
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 114  use cost:4.31 current total cost:3086.210567 normal cost:51.75 current total normal cost:5881.81
+Current total number of use: 75 with cost: 340.53
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 115  use cost:4.13 current total cost:3090.340567 normal cost:51.46 current total normal cost:5933.27
+Current total number of use: 76 with cost: 344.66
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 116  use cost:7.19 current total cost:3097.530567 normal cost:51.66 current total normal cost:5984.93
+Current total number of use: 77 with cost: 351.85
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 117  use cost:4.32 current total cost:3101.850567 normal cost:51.44 current total normal cost:6036.37
+Current total number of use: 78 with cost: 356.17
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 118  use cost:4.12 current total cost:3105.970567 normal cost:51.45 current total normal cost:6087.82
+Current total number of use: 79 with cost: 360.29
+Current total number of cap: 4 with cost: 733.780567
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 119  cap cost:182.447368 use cost:8.46 current total cost:3296.877935 normal cost:51.59 current total normal cost:6139.41
+Current total number of use: 80 with cost: 368.75
+Current total number of cap: 5 with cost: 916.227935
+Current total number of nor: 39 with cost: 2011.9
+Q2: num: 120  nor cost:51.4 current total cost:3348.277935 normal cost:51.61 current total normal cost:6191.02
+Current total number of use: 80 with cost: 368.75
+Current total number of cap: 5 with cost: 916.227935
+Current total number of nor: 40 with cost: 2063.3
+Q2: num: 121  use cost:4.13 current total cost:3352.407935 normal cost:51.68 current total normal cost:6242.7
+Current total number of use: 81 with cost: 372.88
+Current total number of cap: 5 with cost: 916.227935
+Current total number of nor: 40 with cost: 2063.3
+Q2: num: 122  use cost:4.12 current total cost:3356.527935 normal cost:51.52 current total normal cost:6294.22
+Current total number of use: 82 with cost: 377.0
+Current total number of cap: 5 with cost: 916.227935
+Current total number of nor: 40 with cost: 2063.3
+Q2: num: 123  use cost:4.34 current total cost:3360.867935 normal cost:51.6 current total normal cost:6345.82
+Current total number of use: 83 with cost: 381.34
+Current total number of cap: 5 with cost: 916.227935
+Current total number of nor: 40 with cost: 2063.3
+Q2: num: 124  nor cost:51.48 current total cost:3412.347935 normal cost:51.58 current total normal cost:6397.4
+Current total number of use: 83 with cost: 381.34
+Current total number of cap: 5 with cost: 916.227935
+Current total number of nor: 41 with cost: 2114.78
+Q2: num: 125  use cost:4.35 current total cost:3416.697935 normal cost:51.55 current total normal cost:6448.95
+Current total number of use: 84 with cost: 385.69
+Current total number of cap: 5 with cost: 916.227935
+Current total number of nor: 41 with cost: 2114.78
+Q2: num: 126  use cost:4.14 current total cost:3420.837935 normal cost:51.64 current total normal cost:6500.59
+Current total number of use: 85 with cost: 389.83
+Current total number of cap: 5 with cost: 916.227935
+Current total number of nor: 41 with cost: 2114.78
+Q2: num: 127  use cost:7.16 current total cost:3427.997935 normal cost:51.67 current total normal cost:6552.26
+Current total number of use: 86 with cost: 396.99
+Current total number of cap: 5 with cost: 916.227935
+Current total number of nor: 41 with cost: 2114.78
+Q2: num: 128  cap cost:182.776982 use cost:8.56 current total cost:3619.334917 normal cost:51.53 current total normal cost:6603.79
+Current total number of use: 87 with cost: 405.55
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 41 with cost: 2114.78
+Q2: num: 129  use cost:4.33 current total cost:3623.664917 normal cost:51.62 current total normal cost:6655.41
+Current total number of use: 88 with cost: 409.88
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 41 with cost: 2114.78
+Q2: num: 130  use cost:4.33 current total cost:3627.994917 normal cost:51.61 current total normal cost:6707.02
+Current total number of use: 89 with cost: 414.21
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 41 with cost: 2114.78
+Q2: num: 131  use cost:7.13 current total cost:3635.124917 normal cost:51.61 current total normal cost:6758.63
+Current total number of use: 90 with cost: 421.34
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 41 with cost: 2114.78
+Q2: num: 132  nor cost:51.46 current total cost:3686.584917 normal cost:51.5 current total normal cost:6810.13
+Current total number of use: 90 with cost: 421.34
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 42 with cost: 2166.24
+Q2: num: 133  use cost:4.36 current total cost:3690.944917 normal cost:51.8 current total normal cost:6861.93
+Current total number of use: 91 with cost: 425.7
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 42 with cost: 2166.24
+Q2: num: 134  use cost:7.17 current total cost:3698.114917 normal cost:51.67 current total normal cost:6913.6
+Current total number of use: 92 with cost: 432.87
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 42 with cost: 2166.24
+Q2: num: 135  use cost:8.47 current total cost:3706.584917 normal cost:51.52 current total normal cost:6965.12
+Current total number of use: 93 with cost: 441.34
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 42 with cost: 2166.24
+Q2: num: 136  use cost:5.16 current total cost:3711.744917 normal cost:51.6 current total normal cost:7016.72
+Current total number of use: 94 with cost: 446.5
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 42 with cost: 2166.24
+Q2: num: 137  use cost:4.31 current total cost:3716.054917 normal cost:51.56 current total normal cost:7068.28
+Current total number of use: 95 with cost: 450.81
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 42 with cost: 2166.24
+Q2: num: 138  use cost:4.35 current total cost:3720.404917 normal cost:51.6 current total normal cost:7119.88
+Current total number of use: 96 with cost: 455.16
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 42 with cost: 2166.24
+Q2: num: 139  nor cost:51.34 current total cost:3771.744917 normal cost:51.49 current total normal cost:7171.37
+Current total number of use: 96 with cost: 455.16
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 43 with cost: 2217.58
+Q2: num: 140  use cost:4.14 current total cost:3775.884917 normal cost:51.45 current total normal cost:7222.82
+Current total number of use: 97 with cost: 459.3
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 43 with cost: 2217.58
+Q2: num: 141  nor cost:51.51 current total cost:3827.394917 normal cost:51.71 current total normal cost:7274.53
+Current total number of use: 97 with cost: 459.3
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 44 with cost: 2269.09
+Q2: num: 142  use cost:7.2 current total cost:3834.594917 normal cost:51.36 current total normal cost:7325.89
+Current total number of use: 98 with cost: 466.5
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 44 with cost: 2269.09
+Q2: num: 143  nor cost:51.46 current total cost:3886.054917 normal cost:51.52 current total normal cost:7377.41
+Current total number of use: 98 with cost: 466.5
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 45 with cost: 2320.55
+Q2: num: 144  use cost:4.34 current total cost:3890.394917 normal cost:51.63 current total normal cost:7429.04
+Current total number of use: 99 with cost: 470.84
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 45 with cost: 2320.55
+Q2: num: 145  use cost:7.23 current total cost:3897.624917 normal cost:51.5 current total normal cost:7480.54
+Current total number of use: 100 with cost: 478.07
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 45 with cost: 2320.55
+Q2: num: 146  use cost:4.34 current total cost:3901.964917 normal cost:51.66 current total normal cost:7532.2
+Current total number of use: 101 with cost: 482.41
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 45 with cost: 2320.55
+Q2: num: 147  use cost:4.34 current total cost:3906.304917 normal cost:51.57 current total normal cost:7583.77
+Current total number of use: 102 with cost: 486.75
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 45 with cost: 2320.55
+Q2: num: 148  nor cost:51.56 current total cost:3957.864917 normal cost:51.77 current total normal cost:7635.54
+Current total number of use: 102 with cost: 486.75
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 149  use cost:5.14 current total cost:3963.004917 normal cost:51.65 current total normal cost:7687.19
+Current total number of use: 103 with cost: 491.89
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 150  use cost:7.17 current total cost:3970.174917 normal cost:51.51 current total normal cost:7738.7
+Current total number of use: 104 with cost: 499.06
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 151  use cost:4.15 current total cost:3974.324917 normal cost:51.57 current total normal cost:7790.27
+Current total number of use: 105 with cost: 503.21
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 152  use cost:4.37 current total cost:3978.694917 normal cost:51.41 current total normal cost:7841.68
+Current total number of use: 106 with cost: 507.58
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 153  use cost:4.32 current total cost:3983.014917 normal cost:51.74 current total normal cost:7893.42
+Current total number of use: 107 with cost: 511.9
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 154  use cost:4.14 current total cost:3987.154917 normal cost:51.74 current total normal cost:7945.16
+Current total number of use: 108 with cost: 516.04
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 155  use cost:7.19 current total cost:3994.344917 normal cost:51.48 current total normal cost:7996.64
+Current total number of use: 109 with cost: 523.23
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 156  use cost:4.34 current total cost:3998.684917 normal cost:51.71 current total normal cost:8048.35
+Current total number of use: 110 with cost: 527.57
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 157  use cost:4.33 current total cost:4003.014917 normal cost:51.3 current total normal cost:8099.65
+Current total number of use: 111 with cost: 531.9
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 158  use cost:4.34 current total cost:4007.354917 normal cost:51.86 current total normal cost:8151.51
+Current total number of use: 112 with cost: 536.24
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 159  use cost:4.12 current total cost:4011.474917 normal cost:51.71 current total normal cost:8203.22
+Current total number of use: 113 with cost: 540.36
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 160  use cost:4.31 current total cost:4015.784917 normal cost:51.72 current total normal cost:8254.94
+Current total number of use: 114 with cost: 544.67
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 161  use cost:7.17 current total cost:4022.954917 normal cost:51.6 current total normal cost:8306.54
+Current total number of use: 115 with cost: 551.84
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 162  use cost:4.13 current total cost:4027.084917 normal cost:51.6 current total normal cost:8358.14
+Current total number of use: 116 with cost: 555.97
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 163  use cost:4.13 current total cost:4031.214917 normal cost:51.69 current total normal cost:8409.83
+Current total number of use: 117 with cost: 560.1
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 164  use cost:4.36 current total cost:4035.574917 normal cost:51.46 current total normal cost:8461.29
+Current total number of use: 118 with cost: 564.46
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 165  use cost:4.33 current total cost:4039.904917 normal cost:51.57 current total normal cost:8512.86
+Current total number of use: 119 with cost: 568.79
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 166  use cost:4.11 current total cost:4044.014917 normal cost:51.56 current total normal cost:8564.42
+Current total number of use: 120 with cost: 572.9
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 167  use cost:7.19 current total cost:4051.204917 normal cost:51.51 current total normal cost:8615.93
+Current total number of use: 121 with cost: 580.09
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 46 with cost: 2372.11
+Q2: num: 168  nor cost:51.74 current total cost:4102.944917 normal cost:51.59 current total normal cost:8667.52
+Current total number of use: 121 with cost: 580.09
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 169  use cost:4.11 current total cost:4107.054917 normal cost:51.67 current total normal cost:8719.19
+Current total number of use: 122 with cost: 584.2
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 170  use cost:4.14 current total cost:4111.194917 normal cost:51.59 current total normal cost:8770.78
+Current total number of use: 123 with cost: 588.34
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 171  use cost:4.34 current total cost:4115.534917 normal cost:51.49 current total normal cost:8822.27
+Current total number of use: 124 with cost: 592.68
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 172  use cost:4.34 current total cost:4119.874917 normal cost:51.43 current total normal cost:8873.7
+Current total number of use: 125 with cost: 597.02
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 173  use cost:4.13 current total cost:4124.004917 normal cost:51.45 current total normal cost:8925.15
+Current total number of use: 126 with cost: 601.15
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 174  use cost:4.33 current total cost:4128.334917 normal cost:51.73 current total normal cost:8976.88
+Current total number of use: 127 with cost: 605.48
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 175  use cost:4.15 current total cost:4132.484917 normal cost:51.5 current total normal cost:9028.38
+Current total number of use: 128 with cost: 609.63
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 176  use cost:4.34 current total cost:4136.824917 normal cost:51.49 current total normal cost:9079.87
+Current total number of use: 129 with cost: 613.97
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 177  use cost:7.16 current total cost:4143.984917 normal cost:51.69 current total normal cost:9131.56
+Current total number of use: 130 with cost: 621.13
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 178  use cost:4.13 current total cost:4148.114917 normal cost:51.5 current total normal cost:9183.06
+Current total number of use: 131 with cost: 625.26
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 179  use cost:4.35 current total cost:4152.464917 normal cost:51.43 current total normal cost:9234.49
+Current total number of use: 132 with cost: 629.61
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 180  use cost:4.16 current total cost:4156.624917 normal cost:51.46 current total normal cost:9285.95
+Current total number of use: 133 with cost: 633.77
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 181  use cost:4.35 current total cost:4160.974917 normal cost:51.56 current total normal cost:9337.51
+Current total number of use: 134 with cost: 638.12
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 182  use cost:4.33 current total cost:4165.304917 normal cost:51.3 current total normal cost:9388.81
+Current total number of use: 135 with cost: 642.45
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 183  use cost:7.2 current total cost:4172.504917 normal cost:51.66 current total normal cost:9440.47
+Current total number of use: 136 with cost: 649.65
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 184  use cost:7.13 current total cost:4179.634917 normal cost:51.73 current total normal cost:9492.2
+Current total number of use: 137 with cost: 656.78
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 185  use cost:4.12 current total cost:4183.754917 normal cost:51.71 current total normal cost:9543.91
+Current total number of use: 138 with cost: 660.9
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 186  use cost:4.13 current total cost:4187.884917 normal cost:51.4 current total normal cost:9595.31
+Current total number of use: 139 with cost: 665.03
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 187  use cost:4.35 current total cost:4192.234917 normal cost:51.61 current total normal cost:9646.92
+Current total number of use: 140 with cost: 669.38
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 188  use cost:8.4 current total cost:4200.634917 normal cost:51.47 current total normal cost:9698.39
+Current total number of use: 141 with cost: 677.78
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 189  use cost:4.34 current total cost:4204.974917 normal cost:51.48 current total normal cost:9749.87
+Current total number of use: 142 with cost: 682.12
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 190  use cost:4.13 current total cost:4209.104917 normal cost:51.55 current total normal cost:9801.42
+Current total number of use: 143 with cost: 686.25
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 191  use cost:4.13 current total cost:4213.234917 normal cost:51.44 current total normal cost:9852.86
+Current total number of use: 144 with cost: 690.38
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 192  use cost:4.13 current total cost:4217.364917 normal cost:51.45 current total normal cost:9904.31
+Current total number of use: 145 with cost: 694.51
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 193  use cost:4.16 current total cost:4221.524917 normal cost:51.65 current total normal cost:9955.96
+Current total number of use: 146 with cost: 698.67
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 47 with cost: 2423.85
+Q2: num: 194  nor cost:51.43 current total cost:4272.954917 normal cost:51.39 current total normal cost:10007.35
+Current total number of use: 146 with cost: 698.67
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 48 with cost: 2475.28
+Q2: num: 195  use cost:4.34 current total cost:4277.294917 normal cost:51.42 current total normal cost:10058.77
+Current total number of use: 147 with cost: 703.01
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 48 with cost: 2475.28
+Q2: num: 196  use cost:8.41 current total cost:4285.704917 normal cost:51.73 current total normal cost:10110.5
+Current total number of use: 148 with cost: 711.42
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 48 with cost: 2475.28
+Q2: num: 197  use cost:7.21 current total cost:4292.914917 normal cost:51.54 current total normal cost:10162.04
+Current total number of use: 149 with cost: 718.63
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 48 with cost: 2475.28
+Q2: num: 198  use cost:8.48 current total cost:4301.394917 normal cost:51.49 current total normal cost:10213.53
+Current total number of use: 150 with cost: 727.11
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 48 with cost: 2475.28
+Q2: num: 199  use cost:8.42 current total cost:4309.814917 normal cost:51.48 current total normal cost:10265.01
+Current total number of use: 151 with cost: 735.53
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 48 with cost: 2475.28
+Q2: num: 200  use cost:7.19 current total cost:4317.004917 normal cost:51.59 current total normal cost:10316.6
+Current total number of use: 152 with cost: 742.72
+Current total number of cap: 6 with cost: 1099.004917
+Current total number of nor: 48 with cost: 2475.28
