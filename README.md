@@ -9,6 +9,9 @@ path: experiments/postgres/stackOverflow
 # monetdb tpch (Fig.6 h,i,j,k in main paper)
 path: experiments/monetdb
 
+## db-x tpch 10g (fig.6 c in main paper)
+path: experiments/dbx
+
 # stackOverflow end-to-end mix (fig.7 a in main paper)
 path: experiments/end-to-end/stackOverflow/mix
 
