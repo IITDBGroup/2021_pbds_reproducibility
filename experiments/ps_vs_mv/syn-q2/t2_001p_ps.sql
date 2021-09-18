@@ -1,0 +1,1 @@
+select * from (select maxa,v3.ee from (select max(a) as maxa, ee from (select * from v2 where a <@ '{39995812,40000001}'::int[]) v2 group by ee) y, (select * from v3 where a <@ '{39995812,40000001}'::int[]) v3 where y.ee = v3.ee) z where maxa > 39996000;

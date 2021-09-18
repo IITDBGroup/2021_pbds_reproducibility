@@ -1,0 +1,1 @@
+select * from (select C.u_id as u_link, sum(D.downvotes) as downvotes from Users C, (select A.p_id as postId, A.p_owneruserid as userId, B.downvotes from Posts A,(select v_postid, count(*) as downvotes from Votes where v_votetypeid = 3  group by v_postid) B where A.p_id = B.v_postid) D where C.u_id = D.userId group by C.u_id order by downvotes desc) E limit 100;

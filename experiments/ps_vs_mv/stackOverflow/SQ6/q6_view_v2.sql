@@ -1,0 +1,1 @@
+SELECT * FROM (SELECT * FROM (SELECT * FROM (SELECT u_Id, Count(p_id) AS Answers, AVG(p_score) as avg_score FROM q2_v2 GROUP BY u_id, u_displayname) a WHERE Answers < 10) b ORDER BY avg_score DESC) c LIMIT 100;

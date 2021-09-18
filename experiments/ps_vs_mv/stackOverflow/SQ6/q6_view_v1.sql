@@ -1,0 +1,1 @@
+SELECT * FROM (SELECT * FROM (SELECT * FROM q2_v1 a WHERE Answers < 10) b ORDER BY avg_score DESC) c LIMIT 100;

@@ -1,0 +1,1 @@
+select * from (select p.p_id as p_link, up, down from (select v_postid, sum(case when v_votetypeid = 2 then 1 else 0 end) as up, sum(case when v_votetypeid = 3 then 1 else 0 end) as down from Votes where v_votetypeid in (2,3) group by v_postid) x, posts p where v_postid = p.p_id and down > (up * 0.5) and p.p_communityowneddate is null order by up desc) y limit 100;

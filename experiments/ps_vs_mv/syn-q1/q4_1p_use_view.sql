@@ -1,0 +1,22 @@
+select * from (select * from v2_avga_gee where 
+(ee >= 98998 and ee< 99053) 
+ OR (ee >= 99053 and ee< 99108) 
+ OR (ee >= 99108 and ee< 99163) 
+ OR (ee >= 99163 and ee< 99218) 
+ OR (ee >= 99218 and ee< 99273) 
+ OR (ee >= 99273 and ee< 99328) 
+ OR (ee >= 99328 and ee< 99383) 
+ OR (ee >= 99383 and ee< 99438) 
+ OR (ee >= 99438 and ee< 99493) 
+ OR (ee >= 99493 and ee< 99548) 
+ OR (ee >= 99548 and ee< 99603) 
+ OR (ee >= 99603 and ee< 99658) 
+ OR (ee >= 99658 and ee< 99713) 
+ OR (ee >= 99713 and ee< 99768) 
+ OR (ee >= 99768 and ee< 99823) 
+ OR (ee >= 99823 and ee< 99878) 
+ OR (ee >= 99878 and ee< 99933) 
+ OR (ee >= 99933 and ee< 99988) 
+ OR (ee >= 99988 and ee< 100001) 
+) x where suma > 39600000;
+

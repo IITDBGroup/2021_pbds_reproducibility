@@ -1,0 +1,1 @@
+select * from (select * from (select * from v2_maxa_gee where ee >= 99892 and ee < 100000) y, (select * from v3 where a <@ '{39956568,40000001}'::int[]) v3 where y.ee = v3.ee) z where maxa > 39960000;

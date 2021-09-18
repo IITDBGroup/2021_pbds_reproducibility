@@ -1,0 +1,22 @@
+select * from (select * from v4_avga_ggg where 
+(gg >= 989980 and gg< 990536) 
+ OR (gg >= 990536 and gg< 991092) 
+ OR (gg >= 991092 and gg< 991648) 
+ OR (gg >= 991648 and gg< 992204) 
+ OR (gg >= 992204 and gg< 992760) 
+ OR (gg >= 992760 and gg< 993316) 
+ OR (gg >= 993316 and gg< 993872) 
+ OR (gg >= 993872 and gg< 994428) 
+ OR (gg >= 994428 and gg< 994984) 
+ OR (gg >= 994984 and gg< 995540) 
+ OR (gg >= 995540 and gg< 996096) 
+ OR (gg >= 996096 and gg< 996652) 
+ OR (gg >= 996652 and gg< 997208) 
+ OR (gg >= 997208 and gg< 997764) 
+ OR (gg >= 997764 and gg< 998320) 
+ OR (gg >= 998320 and gg< 998876) 
+ OR (gg >= 998876 and gg< 999432) 
+ OR (gg >= 999432 and gg< 999988) 
+ OR (gg >= 999988 and gg< 1000001) 
+) x where avga > 39600000;
+

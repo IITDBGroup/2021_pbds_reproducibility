@@ -1,0 +1,1 @@
+select * from (select count(p.p_id) as rate, t.t_id as tagname from tags t, posttags pt, posts p where t.t_id = pt.t_id and p.p_id = pt.p_id and p.p_creationdate < '2010-06-01' and p.p_creationdate > '2010-05-01' group by t.t_id) as rate, (select * from q3_v3 a where num > 800) as num where rate.tagname = num.tagname;
