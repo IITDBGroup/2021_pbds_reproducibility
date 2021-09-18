@@ -1,7 +1,0 @@
-                                                    QUERY PLAN                                                    
-------------------------------------------------------------------------------------------------------------------
- Seq Scan on movies f0  (cost=0.00..55108.78 rows=27278 width=82) (actual time=0.020..891.580 rows=27278 loops=1)
- Planning time: 1.375 ms
- Execution time: 894.858 ms
-(3 rows)
-

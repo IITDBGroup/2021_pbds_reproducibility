@@ -1,4 +1,0 @@
-1 of 30
-runtime is 158.243000
-Current total sum is 0.0
-2 of 30

@@ -1,12 +1,15 @@
 #!/bin/bash
-../time_crimes.sh ./q1_2/q1_2.sql 20 5 > ./result/q1_nor.txt
-../time_crimes.sh ./q2/q2.sql 20 5 > ./result/q2_nor.txt
+
+#the runtime of cq1 and cq2
+./time_crimes.sh ./cq1/cq1.sql 100 5 > ./result/cq1.txt
+./time_crimes.sh ./cq2/cq2.sql 100 5 > ./result/cq2.txt
 
 
-for i in 1_2 2
+#the runtime of applying ps (use) and the capture cost (cap)
+for i in 1 2 
 do
-        for k in use capture
+        for j in use cap
         do
-        ../time_crimes.sh ./q"$i"/q"$i"_"$k".sql 20 5 > ./result/q"$i"_"$k".txt            
+        ./time_crimes.sh ./cq"$i"/cq"$i"_"$j".sql 100 5 > ./result/cq"$i"_"$j".txt            
         done;
 done;
