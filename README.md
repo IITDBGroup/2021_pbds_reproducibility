@@ -1,12 +1,12 @@
 # 2021_pbds_reproducibility
 
-# postgres tpch 1g and 10g (Fig.6 a,b,f,g in main paper)
+### postgres tpch 1g and 10g (Fig.6 a,b,f,g in main paper)
 path: experiments/postgres/tpch
 
-# postgres stackOverflow (Fig.6 d and e in main paper)
+## postgres stackOverflow (Fig.6 d and e in main paper)
 path: experiments/postgres/stackOverflow
 
-# monetdb tpch (Fig.6 h,i,j,k in main paper)
+## monetdb tpch (Fig.6 h,i,j,k in main paper)
 path: experiments/monetdb
 
 ## db-x tpch 10g (fig.6 c in main paper)
