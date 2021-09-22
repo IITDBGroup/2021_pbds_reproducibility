@@ -5,7 +5,7 @@ We implemented PBDS in our GProM system which is a middleware. Provenance sketch
 
 ## GProM source code
 
-Is included in folder `./gprom`
+Is included in folder `./gprom`. Note that GProM is available as open source at [https://www.github.com/IITDBGroup/GProM](https://www.github.com/IITDBGroup/GProM). We just include the source code for convenience.
 
 ## Raw results and plot scripts
 
