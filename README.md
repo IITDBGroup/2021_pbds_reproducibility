@@ -9,7 +9,7 @@ Is included in folder `./gprom`. Note that GProM is available as open source at 
 
 ## Raw results and plot scripts
 
-We include the raw experimental results and scripts for plotting them in folder
+We include the raw experimental results and scripts for plotting here:
 
 path: `results`
 
