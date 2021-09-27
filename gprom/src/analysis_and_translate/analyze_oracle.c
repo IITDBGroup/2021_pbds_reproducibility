@@ -32,6 +32,7 @@
 #include "temporal_queries/temporal_rewriter.h"
 #include "utility/string_utils.h"
 #include "provenance_rewriter/uncertainty_rewrites/uncert_rewriter.h"
+#include "provenance_rewriter/coarse_grained/coarse_grained_rewrite.h"
 
 static void analyzeStmtList (List *l, List *parentFroms);
 static void analyzeQueryBlock (QueryBlock *qb, List *parentFroms);
@@ -91,7 +92,6 @@ static void analyzeFromJsonTable(FromJsonTable *f, List **state);
 
 // real attribute name fetching
 static List *expandStarExpression (SelectItem *s, List *fromClause);
-static List *splitAttrOnDot (char *dotName);
 
 //static char *getAttrNameFromNameWithBlank(char *blankName);
 static List *getFromTreeLeafs (List *from);
@@ -136,6 +136,7 @@ adaptIdentifiers (Node *stmt)
  * - fromprovinfo
  * - select itmes
  * - with statements
+ * - provenance sketch specfications in Provenance
  */
 static boolean
 visitAdaptIdents(Node *node, Set *context)
@@ -147,7 +148,7 @@ visitAdaptIdents(Node *node, Set *context)
 			  NodeTagToString(node->type),
 			  (void *) node,
 			  hasSetElem(context, node) ? "SEEN BEFORE" : "NEW");
-	
+
     if(!hasSetElem(context, node))
     {
 		if(isA(node,FunctionCall)
@@ -155,7 +156,8 @@ visitAdaptIdents(Node *node, Set *context)
 		   || isFromItem(node)
 		   || isA(node,SelectItem)
 		   || isA(node,FromProvInfo)
-		   || isA(node,AttributeReference))
+		   || isA(node,AttributeReference)
+		   || isA(node,ProvenanceStmt))
 		{
 			if(isA(node,FunctionCall))
 			{
@@ -168,7 +170,7 @@ visitAdaptIdents(Node *node, Set *context)
 				FromItem *f = (FromItem *) node;
 
 				DEBUG_NODE_BEATIFY_LOG("fix idents in from item", f);
-				
+
 				// change alias
 				if (f->name != NULL)
 					f->name = backendifyIdentifier(f->name);
@@ -233,7 +235,7 @@ visitAdaptIdents(Node *node, Set *context)
 							setStringProvProperty(fp, PROV_PROP_XTABLE_PROB, (Node *) createConstString(attrname));
 						}
 					}
-				}				
+				}
 			}
 
 			if (isA(node, SelectItem))
@@ -246,8 +248,8 @@ visitAdaptIdents(Node *node, Set *context)
 
 					// need to first fixe attribute references in children for this to work
 					visit(node, visitAdaptIdents, context);
-					
-					newAlias = generateAttrNameFromExpr(s);					
+
+					newAlias = generateAttrNameFromExpr(s);
 					s->alias = strdup(newAlias);
 
 					// return to avoid checking again
@@ -256,7 +258,7 @@ visitAdaptIdents(Node *node, Set *context)
 				else
 				{
 					s->alias = backendifyIdentifier(s->alias);
-				}				
+				}
 			}
 
 			if(isA(node,AttributeReference))
@@ -264,7 +266,7 @@ visitAdaptIdents(Node *node, Set *context)
 				AttributeReference *a = (AttributeReference *) node;
 				List *result = NIL;
 				StringInfo str = makeStringInfo();
-				
+
 				result = splitString(strdup(a->name), "."); //FIXME will fail when . appears in a quoted ident part
 				FOREACH(char,part,result)
 				{
@@ -274,13 +276,49 @@ visitAdaptIdents(Node *node, Set *context)
 					appendStringInfo(str, "%s%s",
 									 !FOREACH_IS_FIRST(part,result) ? "." : "",
 									 newName);
-				}				
+				}
 
 				TRACE_LOG("name <%s> backendified into <%s>", a->name, str->data);
-				
-				a->name = strdup(str->data);				
+
+				a->name = strdup(str->data);
 			}
-			
+
+			if(isA(node,ProvenanceStmt))
+			{
+				ProvenanceStmt *p = (ProvenanceStmt *) node;
+
+				FOREACH(KeyValue,kv,p->options)
+				{
+					// backendify sketch table name and attribute name
+					if(isA(kv->key,Constant)
+					   && ((Constant *) kv->key)->constType == DT_STRING
+					   && streq(STRING_VALUE(kv->key),PROP_PC_COARSE_GRAINED))
+					{
+						List *typeSketch = (List *) kv->value;
+						Constant *type = (Constant *) getHeadOfListP(typeSketch);
+						List *sketches = (List *) getNthOfListP(typeSketch, 1);
+
+						//TODO check for other sketch types too
+						if(((Constant *) type)->constType == DT_STRING
+						   && streq(STRING_VALUE(type),COARSE_GRAINED_RANGEB))
+						{
+							FOREACH(KeyValue,ps,sketches)
+							{
+								Constant *tableName = (Constant *) ps->key;
+								List *attrSketchDefs = (List *) ps->value;
+								tableName->value = backendifyIdentifier(STRING_VALUE(tableName));
+
+								FOREACH(List,attrDef,attrSketchDefs)
+								{
+									Constant *attrName = (Constant *) getHeadOfListP(attrDef);
+									attrName->value = backendifyIdentifier(STRING_VALUE(attrName));
+								}
+							}
+						}
+					}
+				}
+			}
+
 			addToSet(context, node);
 		}
     }
@@ -1770,30 +1808,33 @@ analyzeNaturalJoinRef(FromTableRef *left, FromTableRef *right)
 	return result;
 }
 
-static List *
+List *
 splitAttrOnDot(char *dotName)
 {
-    List *result = NIL;
+    List *nameParts = NIL;
 
-    result = splitString(strdup(dotName), "."); //FIXME will fail when . appears in a quoted ident part
-    /* FOREACH(char,part,result) */
-    /* { */
-    /*     ListCell *lc = FOREACH_GET_LC(part); */
-    /*     char *newName = backendifyIdentifier(part); */
-    /*     lc->data.ptr_value = newName; */
-    /* } */
+    nameParts = splitString(strdup(dotName), "."); //FIXME will fail when . appears in a quoted ident part
 
-    TRACE_LOG("Split attribute reference <%s> into <%s>", dotName, stringListToString(result));
+    TRACE_LOG("Split attribute reference <%s> into <%s>", dotName, stringListToString(nameParts));
 
-    return result;
+    return nameParts;
 }
+
+char *
+lastAttrNamePart(char *attrName)
+{
+	List *nameParts = splitAttrOnDot(attrName);
+
+	return (char *) getTailOfListP(nameParts);
+}
+
 
 #define DUMMY_FROM_IDENT_PREFIX backendifyIdentifier("dummyFrom")
 
 static List *
 expandStarExpression(SelectItem *s, List *fromClause)
 {
-    List *nameParts = splitAttrOnDot(s->alias); //TODO check why splitting here? 
+    List *nameParts = splitAttrOnDot(s->alias); //TODO check why splitting here?
     List *newSelectItems = NIL;
     List *leafItems = getFromTreeLeafs(fromClause);
     ASSERT(LIST_LENGTH(nameParts) == 1 || LIST_LENGTH(nameParts) == 2);
@@ -1911,16 +1952,16 @@ getFromTreeLeafs (List *from)
 static char *
 generateAttrNameFromExpr(SelectItem *s)
 {
-    char *name = exprToSQL(s->expr, NULL);
+    char *name = exprToSQL(s->expr, NULL, TRUE);
     char c;
     StringInfo str = makeStringInfo();
-	
+
     if (streq(getOptionAsString(OPTION_BACKEND),"oracle"))
     {
-		
+
         while((c = *name++) != '\0')
 		{
-            if (c != ' ' && c != '"')
+            if (c != ' ' && c != '"' && c != '.')
 			{
                 appendStringInfoChar(str, toupper(c));
 			}
@@ -1930,7 +1971,7 @@ generateAttrNameFromExpr(SelectItem *s)
     {
         while((c = *name++) != '\0')
 		{
-            if (c != ' ')
+            if (c != ' ' && c != '.')
 			{
                 appendStringInfoChar(str, c);
 			}
@@ -1939,7 +1980,7 @@ generateAttrNameFromExpr(SelectItem *s)
 		// need to escape double quotes in generated string
 		str->data = replaceSubstr(str->data, "\"", "_");
     }
-	
+
     return str->data;
 }
 
@@ -2031,7 +2072,7 @@ analyzeSetQuery (SetQuery *q, List *parentFroms)
 
 static void
 analyzeProvenanceStmt (ProvenanceStmt *q, List *parentFroms)
-{	
+{
     switch (q->inputType)
     {
         case PROV_INPUT_TRANSACTION:
@@ -2269,7 +2310,7 @@ correctFromTableVisitor(Node *node, void *context)
 	{
 		WithStmt *w = (WithStmt *) node;
 		List *analyzedViews = NIL;
-		
+
 		// analyze each view, but make sure to set attributes of dummy views upfront
 		FOREACH(KeyValue,v,w->withViews)
 		{
@@ -2281,8 +2322,8 @@ correctFromTableVisitor(Node *node, void *context)
 		setViewFromTableRefAttrs(w->query, analyzedViews);
 
 		return TRUE;
-	}	   
-	
+	}
+
     if(isFromItem(node))
     {
         switch (node->type)
@@ -2379,7 +2420,7 @@ static List *
 getAnalyzedViews(WithStmt *w)
 {
 	List *analyzedViews = NIL;
-	
+
    // analyze each view, but make sure to set attributes of dummy views upfront
     FOREACH(KeyValue,v,w->withViews)
     {

@@ -1623,7 +1623,7 @@ translateNestedSubquery(QueryBlock *qb, QueryOperator *joinTreeRoot, List *attrs
         List *dts = getDataTypes(lChild->schema);
 
         // add an auxiliary attribute, which stores the result of evaluating the nested subquery expr
-        char *attrName = CONCAT_STRINGS("nesting_eval_", gprom_itoa(i++));
+        char *attrName = getNestingResultAttribute(i++);
         addToMap(subqueryToAttribute, (Node *) nsq,
                 (Node *) createNodeKeyValue((Node *) createConstString(attrName),
                                             (Node *)createConstInt(LIST_LENGTH(attrNames))));
@@ -1634,7 +1634,7 @@ translateNestedSubquery(QueryBlock *qb, QueryOperator *joinTreeRoot, List *attrs
 
         else if (nsq->nestingType == NESTQ_SCALAR)
         {
-        		nsq->nestingAttrDatatype = getAttrDefByPos(rChild, 0)->dataType;
+			nsq->nestingAttrDatatype = getAttrDefByPos(rChild, 0)->dataType;
             dts = appendToTailOfListInt(dts, getAttrDefByPos(rChild, 0)->dataType);
         }
         else
@@ -2215,7 +2215,7 @@ visitAggregFunctionCall(Node *n, List **aggregs)
         FunctionCall *fc = (FunctionCall *) n;
         if (fc->isAgg)
         {
-            DEBUG_LOG("Found aggregation '%s'.", exprToSQL((Node *) fc, NULL));
+            DEBUG_LOG("Found aggregation '%s'.", exprToSQL((Node *) fc, NULL, TRUE));
             *aggregs = appendToTailOfList(*aggregs, fc);
 
             // do not recurse into aggregation function calls
@@ -2234,7 +2234,7 @@ visitFindWindowFuncs(Node *n, List **wfs)
 
     if (isA(n, WindowFunction))
     {
-        DEBUG_LOG("Found window function <%s>", exprToSQL(n, NULL));
+        DEBUG_LOG("Found window function <%s>", exprToSQL(n, NULL, TRUE));
         *wfs = appendToTailOfList(*wfs, n);
         return TRUE;
     }

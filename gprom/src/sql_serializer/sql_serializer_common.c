@@ -212,7 +212,7 @@ setNestAttrMap(QueryOperator *op, HashMap **map, FromAttrsContext *fac, Serializ
 			{
 				Operator *cond = (Operator *) nest->cond;
 				Node *a = getHeadOfListP(cond->args);
-				char *name = exprToSQL(a, *map);
+				char *name = exprToSQL(a, *map, FALSE);
 				appendStringInfo(s, "%s %s ANY ", name, cond->name);
 				/* appendStringInfoString(s, name); */
 				/* appendStringInfoString(s, cond->name); */
@@ -222,7 +222,7 @@ setNestAttrMap(QueryOperator *op, HashMap **map, FromAttrsContext *fac, Serializ
 			{
 				Operator *cond = (Operator *) nest->cond;
 				Node *a = getHeadOfListP(cond->args);
-				char *name = exprToSQL(a, *map);
+				char *name = exprToSQL(a, *map, FALSE);
 				appendStringInfo(s, "%s %s ALL ", name, cond->name);
 				/* appendStringInfoString(s, name); */
 				/* appendStringInfoString(s, cond->name); */
@@ -695,32 +695,32 @@ genSerializeFromItem (QueryOperator *fromRoot, QueryOperator *q, StringInfo from
  * Translate a selection into a WHERE clause
  */
 void
-genSerializeWhere (SelectionOperator *q, StringInfo where, FromAttrsContext *fac, SerializeClausesAPI *api)
+genSerializeWhere(SelectionOperator *q, StringInfo where, FromAttrsContext *fac, SerializeClausesAPI *api)
 {
 	HashMap *nestAttrMap = getNestAttrMap((QueryOperator *) q, fac, api);
 
 	appendStringInfoString(where, "\nWHERE ");
 	updateAttributeNames((Node *) q->cond, fac);
-    appendStringInfoString(where, exprToSQL(q->cond, nestAttrMap));
+    appendStringInfoString(where, exprToSQL(q->cond, nestAttrMap, FALSE));
 }
 
 void
-genSerializeLimitOperator (LimitOperator *q, StringInfo limit, SerializeClausesAPI *api)
+genSerializeLimitOperator(LimitOperator *q, StringInfo limit, SerializeClausesAPI *api)
 {
 	if (q->limitExpr != NULL)
 	{
 		appendStringInfoString(limit, "\nLIMIT ");
-		appendStringInfo(limit, "%s", exprToSQL(q->limitExpr, NULL));
+		appendStringInfo(limit, "%s", exprToSQL(q->limitExpr, NULL, FALSE));
 	}
 	if (q->offsetExpr != NULL)
 	{
 		appendStringInfoString(limit, "\nOFFSET ");
-		appendStringInfo(limit, "%s", exprToSQL(q->offsetExpr, NULL));
+		appendStringInfo(limit, "%s", exprToSQL(q->offsetExpr, NULL, FALSE));
 	}
 }
 
 void
-genSerializePreparedStatement (QueryOperator *q, StringInfo prep, SerializeClausesAPI *api)
+genSerializePreparedStatement(QueryOperator *q, StringInfo prep, SerializeClausesAPI *api)
 {
 	if(HAS_STRING_PROP(q, PROP_PREPARED_QUERY_NAME))
 	{
@@ -756,7 +756,7 @@ genSerializeExecPreparedOperator (ExecPreparedOperator *q, StringInfo exec)
 		appendStringInfoString(exec, "(");
 		FOREACH(Constant,p,q->params)
 		{
-			appendStringInfo(exec, exprToSQL((Node *) p, NULL));
+			appendStringInfo(exec, exprToSQL((Node *) p, NULL, FALSE));
 		}
 		appendStringInfoString(exec, ")");
 	}
@@ -769,7 +769,7 @@ genSerializeOrderByOperator (OrderOperator *q, StringInfo order, FromAttrsContex
 	appendStringInfoString(order, "\nORDER BY ");
     //updateAttributeNames((Node *) q->orderExprs, (List *) fromAttrs);
 
-    char *ordExpr = replaceSubstr(exprToSQL((Node *) q->orderExprs, NULL),"(","");
+    char *ordExpr = replaceSubstr(exprToSQL((Node *) q->orderExprs, NULL, FALSE),"(","");
     ordExpr = replaceSubstr(ordExpr,")","");
     ordExpr = replaceSubstr(ordExpr,"'","");
     appendStringInfoString(order, ordExpr);
@@ -935,7 +935,7 @@ exprToSQLWithNamingScheme (Node *expr, int rOffset,FromAttrsContext *fac)
     renameAttrsVisitor(expr, state);
 
     FREE(state);
-    return exprToSQL(expr, NULL);
+    return exprToSQL(expr, NULL, FALSE);
 }
 
 static boolean

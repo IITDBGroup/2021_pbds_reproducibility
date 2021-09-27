@@ -12,6 +12,7 @@
 
 #include "common.h"
 #include "log/logger.h"
+#include "model/expression/expression.h"
 #include "model/query_operator/query_operator.h"
 #include "mem_manager/mem_mgr.h"
 #include "model/node/nodetype.h"
@@ -21,6 +22,7 @@
 #include "model/set/set.h"
 #include "model/query_operator/operator_property.h"
 #include "operator_optimizer/optimizer_prop_inference.h"
+#include "utility/string_utils.h"
 
 static Schema *schemaFromExpressions (char *name, List *attributeNames, List *exprs, List *inputs);
 static KeyValue *getProp (QueryOperator *op, Node *key);
@@ -53,6 +55,25 @@ findNestingOperator (QueryOperator *op, int levelsUp)
     return result;
 }
 
+char *
+getNestingAttrPrefix()
+{
+	return backendifyIdentifier("nesting_eval_");
+}
+
+char *
+getNestingResultAttribute(int number)
+{
+	return backendifyIdentifier(CONCAT_STRINGS("nesting_eval_", gprom_itoa(number)));
+}
+
+boolean
+isNestingAttribute(char *attr)
+{
+	char *prefix = getNestingAttrPrefix();
+	return isPrefix(attr, prefix)
+		|| isPrefix(attr, CONCAT_STRINGS("\"", prefix));
+}
 
 Schema *
 createSchema(char *name, List *attrDefs)
@@ -124,7 +145,7 @@ setAttrDefDataTypeBasedOnBelowOp(QueryOperator *op1, QueryOperator *op2)
 }
 
 static Schema *
-schemaFromExpressions (char *name, List *attributeNames, List *exprs, List *inputs)
+schemaFromExpressions(char *name, List *attributeNames, List *exprs, List *inputs)
 {
     List *dataTypes = NIL;
 
@@ -133,16 +154,16 @@ schemaFromExpressions (char *name, List *attributeNames, List *exprs, List *inpu
 	{
 		FOREACH(Node,n,exprs)
 		{
-			char *name = exprToSQL(n, NULL);
+			char *name = exprToSQL(n, NULL, FALSE); //TODO is that right for this usage?
 			attributeNames = appendToTailOfList(attributeNames, name);
 		}
 	}
-	
+
     FOREACH(Node,n,exprs)
 	{
         dataTypes = appendToTailOfListInt(dataTypes, typeOf(n));
 	}
-		
+
     return createSchemaFromLists(name, attributeNames, dataTypes);
 }
 
@@ -672,7 +693,7 @@ createProjectionOp(List *projExprs, QueryOperator *input, List *parents,
 	/* 	prj->projExprs = appendToTailOfList(prj->projExprs, (Node *) copyObject(expr)); */
 	/* } */
 	prj->projExprs = copyObject(projExprs);
-		
+
     if (input != NULL)
         prj->op.inputs = singleton(input);
     else
@@ -939,6 +960,29 @@ removeStringProperty (QueryOperator *op, char *key)
 {
     removeMapStringElem((HashMap *) op->properties, key);
 }
+
+List *
+appendToListProperty(QueryOperator *op, Node *key, Node *newTail)
+{
+	List *cur = (List *) getProp(op, key);
+
+	cur = appendToTailOfList(cur, newTail);
+	setProperty(op, key, (Node *) cur);
+
+	return cur;
+}
+
+List *
+appendToListStringProperty(QueryOperator *op, char *key, Node *newTail)
+{
+	List *cur = (List *) getStringProperty(op, key);
+
+	cur = appendToTailOfList(cur, newTail);
+	setStringProperty(op, key, (Node *) cur);
+
+	return cur;
+}
+
 
 static KeyValue *
 getProp (QueryOperator *op, Node *key)

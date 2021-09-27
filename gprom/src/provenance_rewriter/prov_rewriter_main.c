@@ -20,6 +20,7 @@
 #include "symbolic_eval/z3_solver.h"
 #include "provenance_rewriter/coarse_grained/common_prop_inference.h"
 #include "provenance_rewriter/coarse_grained/gc_prop_inference.h"
+#include "provenance_rewriter/coarse_grained/ge_prop_inference.h"
 #include "provenance_rewriter/coarse_grained/prop_inference.h"
 #include "provenance_rewriter/game_provenance/gp_main.h"
 #include "provenance_rewriter/semiring_combiner/sc_main.h"
@@ -31,6 +32,7 @@
 #include "provenance_rewriter/summarization_rewrites/summarize_main.h"
 #include "provenance_rewriter/xml_rewrites/xml_prov_main.h"
 #include "provenance_rewriter/unnest_rewrites/unnest_main.h"
+#include "parameterized_query/parameterized_queries.h"
 
 #include "temporal_queries/temporal_rewriter.h"
 
@@ -200,6 +202,7 @@ rewriteProvenanceComputation (ProvenanceComputation *op)
     switch(op->provType)
     {
         case PROV_PI_CS:
+		{
             if (isRewriteOptionActivated(OPTION_PI_CS_USE_COMPOSABLE))
                 result =  rewritePI_CSComposable(op);
             else
@@ -219,55 +222,64 @@ rewriteProvenanceComputation (ProvenanceComputation *op)
                 result = addSemiringCombiner(result,addExpr,multExpr);
                 INFO_OP_LOG("Add semiring combiner:", result);
             }
-
-            break;
-
+		}
+		break;
         case CAP_USE_PROV_COARSE_GRAINED:
-        		coarsePara = (Node *) getStringProperty((QueryOperator *)op, PROP_PC_COARSE_GRAINED);
-        		psPara = createPSInfo(coarsePara);
-        		DEBUG_LOG("coarse grained fragment parameters: %s",nodeToString((Node *) psPara));
-        		markTableAccessAndAggregation((QueryOperator *) op,  (Node *) psPara);
+		{
 
-        	    //mark the number of table - used in provenance scratch
-        	    markNumOfTableAccess((QueryOperator *) op);
-        	    bottomUpPropagateLevelAggregation((QueryOperator *) op, psPara);
+			coarsePara = (Node *) getStringProperty((QueryOperator *)op, PROP_PC_COARSE_GRAINED);
+			psPara = createPSInfo(coarsePara);
+			DEBUG_LOG("coarse grained fragment parameters: %s",nodeToString((Node *) psPara));
+			markTableAccessAndAggregation((QueryOperator *) op,  (Node *) psPara);
 
-    			/* copy op for use ps */
-    			ProvenanceComputation *useOp = (ProvenanceComputation *) copyObject(op);
+			//mark the number of table - used in provenance scratch
+			markNumOfTableAccess((QueryOperator *) op);
+			bottomUpPropagateLevelAggregation((QueryOperator *) op, psPara);
 
-    			/* capture provenance sketch */
-    			QueryOperator *capOp = rewritePI_CS(op);
-    			capOp = addTopAggForCoarse(capOp);
+			/* copy op for use ps */
+			ProvenanceComputation *useOp = (ProvenanceComputation *) copyObject(op);
 
-    			List *attrNames = getAttrNames(capOp->schema);
-    			DEBUG_LOG("PS Attr Names : %s", stringListToString(attrNames));
+			/* capture provenance sketch */
+			QueryOperator *capOp = rewritePI_CS(op);
+			capOp = addTopAggForCoarse(capOp);
 
-    	    		//char *capSql = CONCAT_STRINGS(serializeOperatorModel((Node *)capOp), ";");
-    			//char *capSql = serializeQueryPostgres(capOp);
-    	    		char *capSql = serializeOperatorModel((Node *)capOp);
-    			DEBUG_LOG("Capture Provenance Sketch Sql : %s", capSql);
+			List *attrNames = getAttrNames(capOp->schema);
+			DEBUG_LOG("PS Attr Names : %s", stringListToString(attrNames));
 
-    			/* run capture sql and return a hashmap: (attrName, ps bit vector) key: PROV_nation1  value: "11111111111111" */
-    			HashMap *psMap = getPS(capSql,attrNames);
+			//char *capSql = CONCAT_STRINGS(serializeOperatorModel((Node *)capOp), ";");
+			//char *capSql = serializeQueryPostgres(capOp);
+			char *capSql = serializeOperatorModel((Node *)capOp);
+			DEBUG_LOG("Capture Provenance Sketch Sql : %s", capSql);
 
-    			if(isRewriteOptionActivated(OPTION_PS_USE_NEST))
-    			{
-    				useOp = originalOp;
-            	    //mark the number of table - used in provenance scratch
-    				//markTableAccessAndAggregation((QueryOperator *) useOp,  (Node *) psPara);
-            	    markNumOfTableAccess((QueryOperator *) useOp);
-            	    bottomUpPropagateLevelAggregation((QueryOperator *) useOp, psPara);
-    			}
+			/* run capture sql and return a hashmap: (attrName, ps bit vector) key: PROV_nation1  value: "11111111111111" */
+			HashMap *psMap = getPS(capSql,attrNames);
 
-    			/* use provenance sketch */
-        		markAutoUseTableAccess((QueryOperator *) useOp, psMap);
-        		markUseTableAccessAndAggregation((QueryOperator *) useOp, (Node *) psPara);
+
+			//cache ps information
+			QueryOperator *rootParaSql = OP_LCHILD(op);
+			cachePsInfo(rootParaSql,psPara,psMap);
+
+			if(isRewriteOptionActivated(OPTION_PS_USE_NEST))
+			{
+				useOp = originalOp;
+				//mark the number of table - used in provenance scratch
+				//markTableAccessAndAggregation((QueryOperator *) useOp,  (Node *) psPara);
+				markNumOfTableAccess((QueryOperator *) useOp);
+				bottomUpPropagateLevelAggregation((QueryOperator *) useOp, psPara);
+			}
+
+			/* use provenance sketch */
+			markAutoUseTableAccess((QueryOperator *) useOp, psMap);
+			markUseTableAccessAndAggregation((QueryOperator *) useOp, (Node *) psPara);
 
             result = rewritePI_CS(useOp);
             removeParent(result, (QueryOperator *) useOp);
-
-        		break;
+		}
+		break;
         case PROV_COARSE_GRAINED:
+		{
+// only check safety if we have compiled with Z3
+#if HAVE_Z3
         	DEBUG_LOG("Start Capture PS: ");
         	DEBUG_LOG("Start exprBottomUp: ");
         	exprBottomUp(OP_LCHILD(op));
@@ -280,7 +292,8 @@ rewriteProvenanceComputation (ProvenanceComputation *op)
         	DEBUG_LOG("Start gcBottomUp: ");
         	gcBottomUp(OP_LCHILD(op),singleton("a"));
         	boolean isSafe = GET_BOOL_STRING_PROP(OP_LCHILD(op), PROP_STORE_SET_GC);
-        	DEBUG_LOG("isSaft (1 is safe, 0 is unsafe): %d", isSafe);
+        	INFO_LOG("isSaft: %d", isSafe == 1 ? "safe" : "unsafe");
+#endif
 
         	coarsePara = (Node *) getStringProperty((QueryOperator *)op, PROP_PC_COARSE_GRAINED);
         	psPara = createPSInfo(coarsePara);
@@ -294,22 +307,25 @@ rewriteProvenanceComputation (ProvenanceComputation *op)
         	DEBUG_LOG("finish bottomUpPropagateLevelAggregation!");
         	result = rewritePI_CS(op);
         	result = addTopAggForCoarse(result);
-            break;
+		}
+		break;
         case USE_PROV_COARSE_GRAINED:
-    			if(isRewriteOptionActivated(OPTION_PS_USE_NEST))
-    				op = originalOp;
+		{
+			if(isRewriteOptionActivated(OPTION_PS_USE_NEST))
+				op = originalOp;
 
-        		coarsePara = (Node *) getStringProperty((QueryOperator *)op, PROP_PC_COARSE_GRAINED);
-        		psPara = createPSInfo(coarsePara);
-        		DEBUG_LOG("use coarse grained fragment parameters: %s",nodeToString((Node *) psPara));
-        		markUseTableAccessAndAggregation((QueryOperator *) op, (Node *) psPara);
+			coarsePara = (Node *) getStringProperty((QueryOperator *)op, PROP_PC_COARSE_GRAINED);
+			psPara = createPSInfo(coarsePara);
+			DEBUG_LOG("use coarse grained fragment parameters: %s",nodeToString((Node *) psPara));
+			markUseTableAccessAndAggregation((QueryOperator *) op, (Node *) psPara);
 
-        	    //mark the number of table - used in provenance scratch
-        	    markNumOfTableAccess((QueryOperator *) op);
+			//mark the number of table - used in provenance scratch
+			markNumOfTableAccess((QueryOperator *) op);
 
             result = rewritePI_CS(op);
             removeParent(result, (QueryOperator *) op);
-        	break;
+		}
+		break;
         case USE_PROV_COARSE_GRAINED_BIND:
     			if(isRewriteOptionActivated(OPTION_PS_USE_NEST))
     				op = originalOp;
@@ -337,7 +353,19 @@ rewriteProvenanceComputation (ProvenanceComputation *op)
 //    			HashMap *rmap = bindsToHashMap(b1, b3);
 //
 //    			bottomUpInference(OP_LCHILD(op), lmap, rmap);
-
+#if HAVE_Z3
+    			DEBUG_LOG("Start Capture PS: ");
+    			DEBUG_LOG("Start exprBottomUp: ");
+    			exprBottomUp(OP_LCHILD(op));
+    			DEBUG_LOG("Start predBottomUp: ");
+    			predBottomUp(OP_LCHILD(op));
+    			DEBUG_LOG("print expr:");
+    			printEXPRPro(OP_LCHILD(op));
+    			DEBUG_LOG("print pred:");
+    			printPREDPro(OP_LCHILD(op));
+    			DEBUG_LOG("Start gcBottomUp: ");
+    			doGeBottomUp((QueryOperator *) op);
+#endif
         		coarsePara = (Node *) getStringProperty((QueryOperator *)op, PROP_PC_COARSE_GRAINED);
         		psPara = createPSInfo(coarsePara);
         		DEBUG_LOG("use coarse grained fragment parameters: %s",nodeToString((Node *) psPara));
